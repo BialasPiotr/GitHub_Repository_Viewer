@@ -30,17 +30,12 @@ public class GitHubRepositoryService {
         String url = BASE_URL + "/users/" + username + "/repos?type=all";
         try {
             ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
-
-            // Check if the response is JSON
+            
             if (MediaType.APPLICATION_JSON.isCompatibleWith(response.getHeaders().getContentType())) {
-                // Format and display the JSON response
                 String prettyJson = formatJson(response.getBody());
                 System.out.println(prettyJson);
             }
-
-            // Check if the response is XML
             if (MediaType.APPLICATION_XML.isCompatibleWith(response.getHeaders().getContentType())) {
-                // Format and display the XML response
                 String prettyXml = formatXml(response.getBody());
                 System.out.println(prettyXml);
             }
