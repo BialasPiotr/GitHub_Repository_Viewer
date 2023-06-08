@@ -14,11 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class GitHubRepositoryController {
     @Autowired
-    private final GitHubRepositoryService repositoryService;
-
-    public GitHubRepositoryController(GitHubRepositoryService repositoryService) {
-        this.repositoryService = repositoryService;
-    }
+    private GitHubRepositoryService repositoryService;
 
     @GetMapping(value = "/repositories/{username}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> getRepositories(
