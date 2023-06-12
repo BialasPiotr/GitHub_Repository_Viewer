@@ -29,3 +29,4 @@ After entering an existing user
 When you type in a non-existent user:
 
 <img width="630" alt="404" src="https://github.com/BialasPiotr/GitHub_Repository_Viewer/assets/96840701/b54e12fb-845c-4899-aa71-a2e7107516be">
+
