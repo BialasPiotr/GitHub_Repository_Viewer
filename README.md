@@ -4,7 +4,6 @@ GitHub Repository Viewer is a simple Spring Boot application that retrieves a li
 
 ## Prerequisites
 
-
 - Java 8 or later
 - Maven
 
