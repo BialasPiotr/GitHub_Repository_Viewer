@@ -9,12 +9,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import lombok.NoArgsConstructor;
 
 @RestController
 @RequestMapping("/api")
+@NoArgsConstructor
 public class GitHubRepositoryController {
     @Autowired
-    private GitHubRepositoryService repositoryService;
+    private final GitHubRepositoryService repositoryService;
 
     @GetMapping(value = "/repositories/{username}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> getRepositories(
